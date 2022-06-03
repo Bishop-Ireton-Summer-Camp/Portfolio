@@ -5,6 +5,6 @@ Line 4 of index.md
 
 So, learning to use markdown ... 
 
-** Here is some bold text **
+**Here is some bold text**
 *Here is some italic text*
 ***What happens here?***
