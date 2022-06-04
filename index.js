@@ -22,3 +22,9 @@ var x = setInterval(function() {
     // add text if (distance < 0)
 
 })
+
+let btnHello=document.querySelector('#hello');
+btnHello.addEventListener('click',()=>{
+    btnHello.textContent='clicked';
+    alert("You clicked the button!");
+})
