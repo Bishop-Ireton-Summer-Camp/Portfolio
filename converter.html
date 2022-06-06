@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="converter.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <div id="title">CONVERT</div>
+            </tr>
+            <tr><br></tr>
+            <tr>
+                <td><div id="from">0</div></td>
+                <td><select name="fromType" id="fromType" onchange="changeFrom.call(this, event)">
+                    <option value="decimal">Decimal</option>
+                    <option value="binary">Binary</option>
+                    <option value="hex">Hexadecimal</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    <table id="decimalButtons">
+                        <tr>
+                            <td><button id="dec7">7</button></td>
+                            <td><button id="dec8">8</button></td>
+                            <td><button id="dec9">9</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id="dec4">4</button></td>
+                            <td><button id="dec5">5</button></td>
+                            <td><button id="dec6">6</button></td>
+                        </tr>
+                        <tr>    
+                            <td><button id="dec1">1</button></td>
+                            <td><button id="dec2">2</button></td>
+                            <td><button id="dec3">3</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button id="dec0">0</button></td>
+                            <td></td>
+                        </tr>
+                    </table>
+ 
+                    <table id="hexadecimalButtons">
+                        <tr>
+                            <td><button id="hex0">0</button></td>
+                            <td><button id="hex1">1</button></td>
+                            <td><button id="hex2">2</button></td>
+                            <td><button id="hex3">3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id="hex4">4</button></td>
+                            <td><button id="hex5">5</button></td>
+                            <td><button id="hex6">6</button></td>
+                            <td><button id="hex7">7</button></td>
+                        </tr>
+                        <tr>    
+                            <td><button id="hex8">8</button></td>
+                            <td><button id="hex9">9</button></td>
+                            <td><button id="hexA">A</button></td>
+                            <td><button id="hexB">B</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id="hexC`">C</button></td>
+                            <td><button id="hexD">D</button></td>
+                            <td><button id="hexE`">E</button></td>
+                            <td><button id="hexF">F</button></td>
+                        </tr>
+                    </table>
+ 
+                    <table id="binaryButtons">
+                        <tr>
+                            <td><button id="bin0">0</button></td>
+                            <td><button id="bin1">1</button></td>
+                        </tr>
+                    </table>
+ 
+ 
+                </td>
+                <td>
+                    <table>
+                        <tr><td><button id="C">C</button></td></tr>
+                        <tr><td><button id="0">=</button></td></tr>
+                        <tr><td><button id="<"><</button></td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><div id="to">0</div></td>
+                <td><select name="toType" id="toType">
+                    <option value="decimal">Decimal</option>
+                    <option value="binary">Binary</option>
+                    <option value="hex">Hexadecimal</option>
+                </select></td>
+            </tr>
+        </table>
+        <script type="text/javascript" src="converter.js"></script>
+    </body>
+</html>
