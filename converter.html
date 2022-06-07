@@ -20,58 +20,58 @@
                 <td>
                     <table id="decimalButtons">
                         <tr>
-                            <td><button id="dec7">7</button></td>
-                            <td><button id="dec8">8</button></td>
-                            <td><button id="dec9">9</button></td>
+                            <td><button id="dec7" type="button" onclick="addDigit(this)">7</button></td>
+                            <td><button id="dec8" type="button" onclick="addDigit(this)">8</button></td>
+                            <td><button id="dec9" type="button" onclick="addDigit(this)">9</button></td>
                         </tr>
                         <tr>
-                            <td><button id="dec4">4</button></td>
-                            <td><button id="dec5">5</button></td>
-                            <td><button id="dec6">6</button></td>
+                            <td><button id="dec4" type="button" onclick="addDigit(this)">4</button></td>
+                            <td><button id="dec5" type="button" onclick="addDigit(this)">5</button></td>
+                            <td><button id="dec6" type="button" onclick="addDigit(this)">6</button></td>
                         </tr>
                         <tr>    
-                            <td><button id="dec1">1</button></td>
-                            <td><button id="dec2">2</button></td>
-                            <td><button id="dec3">3</button></td>
+                            <td><button id="dec1" type="button" onclick="addDigit(this)">1</button></td>
+                            <td><button id="dec2" type="button" onclick="addDigit(this)">2</button></td>
+                            <td><button id="dec3" type="button" onclick="addDigit(this)">3</button></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><button id="dec0">0</button></td>
+                            <td><button id="dec0" type="button" onclick="addDigit(this)">0</button></td>
                             <td></td>
                         </tr>
                     </table>
  
-                    <table id="hexadecimalButtons">
+                    <table id="hexadecimalButtons" display="none">
                         <tr>
-                            <td><button id="hex0">0</button></td>
-                            <td><button id="hex1">1</button></td>
-                            <td><button id="hex2">2</button></td>
-                            <td><button id="hex3">3</button></td>
+                            <td><button id="hex0" type="button" onclick="addDigit(this)">0</button></td>
+                            <td><button id="hex1" type="button" onclick="addDigit(this)">1</button></td>
+                            <td><button id="hex2" type="button" onclick="addDigit(this)">2</button></td>
+                            <td><button id="hex3 type="button" onclick="addDigit(this)"">3</button></td>
                         </tr>
                         <tr>
-                            <td><button id="hex4">4</button></td>
-                            <td><button id="hex5">5</button></td>
-                            <td><button id="hex6">6</button></td>
-                            <td><button id="hex7">7</button></td>
+                            <td><button id="hex4" type="button" onclick="addDigit(this)">4</button></td>
+                            <td><button id="hex5" type="button" onclick="addDigit(this)">5</button></td>
+                            <td><button id="hex6" type="button" onclick="addDigit(this)">6</button></td>
+                            <td><button id="hex7" type="button" onclick="addDigit(this)">7</button></td>
                         </tr>
                         <tr>    
-                            <td><button id="hex8">8</button></td>
-                            <td><button id="hex9">9</button></td>
-                            <td><button id="hexA">A</button></td>
-                            <td><button id="hexB">B</button></td>
+                            <td><button id="hex8" type="button" onclick="addDigit(this)">8</button></td>
+                            <td><button id="hex9" type="button" onclick="addDigit(this)">9</button></td>
+                            <td><button id="hexA" type="button" onclick="addDigit(this)">A</button></td>
+                            <td><button id="hexB" type="button" onclick="addDigit(this)">B</button></td>
                         </tr>
                         <tr>
-                            <td><button id="hexC`">C</button></td>
-                            <td><button id="hexD">D</button></td>
-                            <td><button id="hexE`">E</button></td>
-                            <td><button id="hexF">F</button></td>
+                            <td><button id="hexC" type="button" onclick="addDigit(this)">C</button></td>
+                            <td><button id="hexD" type="button" onclick="addDigit(this)">D</button></td>
+                            <td><button id="hexE" type="button" onclick="addDigit(this)">E</button></td>
+                            <td><button id="hexF" type="button" onclick="addDigit(this)">F</button></td>
                         </tr>
                     </table>
  
-                    <table id="binaryButtons">
+                    <table id="binaryButtons" display="none">
                         <tr>
-                            <td><button id="bin0">0</button></td>
-                            <td><button id="bin1">1</button></td>
+                            <td><button id="bin0" type="button" onclick="addDigit(this)">0</button></td>
+                            <td><button id="bin1" type="button" onclick="addDigit(this)">1</button></td>
                         </tr>
                     </table>
  
@@ -80,7 +80,7 @@
                 <td>
                     <table>
                         <tr><td><button id="C">C</button></td></tr>
-                        <tr><td><button id="0">=</button></td></tr>
+                        <tr><td><button id="=" type="button" onclick="convert(this)">=</button></td></tr>
                         <tr><td><button id="<"><</button></td></tr>
                     </table>
                 </td>
