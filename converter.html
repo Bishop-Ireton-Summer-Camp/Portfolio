@@ -41,12 +41,12 @@
                         </tr>
                     </table>
  
-                    <table id="hexadecimalButtons" display="none">
+                    <table id="hexadecimalButtons" style="display:none;">
                         <tr>
                             <td><button id="hex0" type="button" onclick="addDigit(this)">0</button></td>
                             <td><button id="hex1" type="button" onclick="addDigit(this)">1</button></td>
                             <td><button id="hex2" type="button" onclick="addDigit(this)">2</button></td>
-                            <td><button id="hex3 type="button" onclick="addDigit(this)"">3</button></td>
+                            <td><button id="hex3" type="button" onclick="addDigit(this)">3</button></td>
                         </tr>
                         <tr>
                             <td><button id="hex4" type="button" onclick="addDigit(this)">4</button></td>
@@ -68,7 +68,7 @@
                         </tr>
                     </table>
  
-                    <table id="binaryButtons" display="none">
+                    <table id="binaryButtons"  style="display:none;">
                         <tr>
                             <td><button id="bin0" type="button" onclick="addDigit(this)">0</button></td>
                             <td><button id="bin1" type="button" onclick="addDigit(this)">1</button></td>
@@ -89,7 +89,7 @@
                 <td><div id="to">0</div></td>
                 <td><select name="toType" id="toType">
                     <option value="decimal">Decimal</option>
-                    <option value="binary">Binary</option>
+                    <option value="binary" selected>Binary</option>
                     <option value="hex">Hexadecimal</option>
                 </select></td>
             </tr>
