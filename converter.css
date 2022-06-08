@@ -2,6 +2,3 @@ html, body {
     color: green;
     background-color: lightblue;   
 }
-div:binaryButtons, div:hexadecimalButtons {
-     display:none;
-}
