@@ -1,6 +1,5 @@
 // clears from completely
-
-function clear() {
+function clearFrom() {
       var from = document.getElementById("from");
       from.innerHTML = "";
 }
