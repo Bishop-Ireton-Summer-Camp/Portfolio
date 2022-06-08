@@ -1,3 +1,22 @@
+// clears from completely
+
+function clear() {
+      var from = document.getElementById("from");
+      from.innerHTML = "";
+}
+
+// removes the last digit from the from div
+function backup() {
+  var from = document.getElementById("from");
+  var current = from.innerHTML;
+  current = current.substring(0, current.length-1);
+  if (current=="") current = 0;
+  from.innerHTML = current;
+}
+
+// convert does the converting action based on what is
+// selected in the from and to type options and entered
+// into the from div 
 function convert(){
     var fromTypeIndex = document.getElementById("fromType").selectedIndex;
     var types = document.getElementById("fromType").options;
