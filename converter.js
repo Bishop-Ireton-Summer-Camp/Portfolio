@@ -1,7 +1,7 @@
 // clears from completely
 function clearFrom() {
       var from = document.getElementById("from");
-      from.innerHTML = "";
+      from.innerHTML = "0";
 }
 
 // removes the last digit from the from div
@@ -86,6 +86,7 @@ function addDigit(button) {
 // makes the correct number keypad show and hides the others
 
 function changeFrom(event) {
+    clearFrom();
     var newType = this.options[this.selectedIndex].text;
     var binaryButtons = document.getElementById("binaryButtons");
     var decimalButtons = document.getElementById("decimalButtons");
