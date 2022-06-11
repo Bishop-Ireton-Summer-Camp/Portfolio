@@ -56,6 +56,12 @@ function fall() {
     skaterLoc = initialSkaterLocation;
 }
 
+// COLLISION
+
+
+
+// TIMER
+
 function Timer(funct, delayMs, times) {
     if (times == undefined) {
         times = -1;
