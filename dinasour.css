@@ -1,15 +1,10 @@
 img.enemy {
     position: relative;
     left: 1000px;
-    top: 250px;
+    top: 115px;
 }
 img.player {
     position: relative;
     left:350px;
-    top:250px;
-}
-img.enemy2 {
-    position: relative;
-    left:700px;
-    top:250px;
+    top:0px;
 }
