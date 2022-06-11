@@ -1,54 +1,109 @@
-var id = null;
+var enemyPos = 0;
+var enemy = null;
+var movingEnemy = null;
+var moving = false;
 
-function moveEnemy() {
-    var pos = screen.width;
-    clearInterval(id);
-    id = setInterval(frame, 5);
-    function frame() {
-        var enemy = document.getElementById("enemy");
-        if (pos <= 0) {
-            pos = screen.width;
-    //        clearInterval(id);
-        } else {
-            pos--;
-            enemy.style.left = pos + 'px';
-        }
+function startMove() {
+    if (!moving) {
+        moving = true;
+        enemy = document.getElementById("enemy");
+        enemyPos = enemy.offsetLeft;;
+        movingEnemy = new Timer(moveEnemy, 5, -1);
     }
 }
 
-var loc = 0;
+function stopMove() {
+    movingEnemy.kill();
+    moving = false;
+}
+
+function moveEnemy() {
+
+    enemyPos--;
+    if (enemyPos <= 0) {
+        enemyPos = screen.width;
+
+    }
+    enemy.style.left = enemyPos + 'px';
+}
+
+var skaterLoc = 0;
 var initialSkaterLocation = 0;
-var jumpHeight = 0;
 
 function setup() {
     var skater = document.getElementById("skater");
-    loc = skater.offsetTop - 150;
-    initialSkaterLocation = loc; // save to reset skater after jump
-    skater.style.top = loc + 'px'; // move skate to this location
-    var enemy = document.getElementById("enemy");
-    enemy.style.top = loc + 'px';
-    jumpHeight = enemy.height+50;
-    document.addEventListener('keydown', (event)=>{
+    skaterLoc = skater.offsetTop;
+    skater.style.top = skaterLoc + 'px';
+    initialSkaterLocation = skaterLoc; // save to reset skater after jump
+
+    document.addEventListener('keydown', (event) => {
         var keyCode = event.code;
-      
-        if (keyCode == 'Space')
+        if (keyCode == 'Space') {
             jump();
+        }
     }, false);
 }
 
-var jumpInterval = null;
-
 function jump() {
     var skater = document.getElementById("skater");
-  
-    loc -= jumpHeight;
-    skater.style.top = loc + 'px';
-   
-    jumpInterval = setInterval(fall, 600);
-    function fall() {
-        
-        skater.style.top = initialSkaterLocation + 'px';
-        loc = initialSkaterLocation;
-        clearInterval(jumpInterval);
+
+    skaterLoc -= 150;
+    skater.style.top = skaterLoc + 'px';
+    var timer = new Timer(fall, 500, 1);
+}
+
+function fall() {
+    skater.style.top = initialSkaterLocation + 'px';
+    skaterLoc = initialSkaterLocation;
+}
+
+function Timer(funct, delayMs, times) {
+    if (times == undefined) {
+        times = -1;
+
+    }
+    if (delayMs == undefined) {
+        delayMs = 10;
+    }
+
+    this.funct = funct;
+    var times = times;
+    var timesCount = 0;
+    var ticks = (delayMs / 10) | 0;
+    var count = 0;
+    Timer.instances.push(this);
+
+    this.tick = function () {
+        if (count >= ticks) {
+            this.funct();
+            count = 0;
+            if (times > -1) {
+                timesCount++;
+                if (timesCount >= times) {
+                    this.stop();
+                }
+            }
+        }
+        count++;
+    };
+
+    this.stop = function () {
+        var index = Timer.instances.indexOf(this);
+        Timer.instances.splice(index, 1);
+    };
+
+    this.kill = function() {
+        timesCount = 1;
+        times=0;
     }
 }
+
+Timer.instances = [];
+
+Timer.ontick = function () {
+    for (var i in Timer.instances) {
+        Timer.instances[i].tick();
+    }
+};
+
+window.setInterval(Timer.ontick, 10);
