@@ -18,9 +18,11 @@ function stopMove() {
 }
 
 function moveEnemy() {
+
     enemyPos--;
     if (enemyPos <= 0) {
         enemyPos = screen.width;
+
     }
     enemy.style.left = enemyPos + 'px';
 }
@@ -44,6 +46,7 @@ function setup() {
 
 function jump() {
     var skater = document.getElementById("skater");
+
     skaterLoc -= 150;
     skater.style.top = skaterLoc + 'px';
     var timer = new Timer(fall, 500, 1);
@@ -57,6 +60,7 @@ function fall() {
 function Timer(funct, delayMs, times) {
     if (times == undefined) {
         times = -1;
+
     }
     if (delayMs == undefined) {
         delayMs = 10;
