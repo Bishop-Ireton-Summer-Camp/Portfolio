@@ -46,9 +46,9 @@ function setup() {
 function jump() {
     var skater = document.getElementById("skater");
 
-    skaterLoc -= 120;
+    skaterLoc -= 80;
     skater.style.top = skaterLoc + 'px';
-    var timer = new Timer(fall, 1600, 1);
+    var timer = new Timer(fall, 1200, 1);
 }
 
 function fall() {
