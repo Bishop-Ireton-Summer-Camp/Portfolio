@@ -18,6 +18,7 @@ function stopMove() {
 }
 
 function moveEnemy() {
+
     enemyPos--;
     if (enemyPos <= 0) {
         enemyPos = screen.width;
@@ -47,6 +48,7 @@ function jump() {
     skaterLoc -= 75;
     skater.style.top = skaterLoc + 'px';
     var timer = new Timer(fall, 1750, 1);
+
 }
 
 function fall() {
@@ -54,9 +56,16 @@ function fall() {
     skaterLoc = initialSkaterLocation;
 }
 
+// COLLISION
+
+
+
+// TIMER
+
 function Timer(funct, delayMs, times) {
     if (times == undefined) {
         times = -1;
+
     }
     if (delayMs == undefined) {
         delayMs = 10;
