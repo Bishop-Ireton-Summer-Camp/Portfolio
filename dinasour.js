@@ -50,10 +50,12 @@ function setup() {
     }, false);
 }
 
-function jump() {   
-    skaterLoc -= 80;
+
+function jump() {
+    var skater = document.getElementById("skater");
+    skaterLoc -= 75;
     skater.style.top = skaterLoc + 'px';
-    var timer = new Timer(fall, 2000, 1);
+    var timer = new Timer(fall, 1750, 1);
 }
 
 function fall() {
@@ -99,6 +101,7 @@ function Timer(funct, delayMs, times) {
     Timer.instances.push(this);
 
     this.tick = function () {
+      //  console.log("Count: " + count + " ticks: " + ticks + " timesCount: " + timesCount + " times: " + times);
         if (count >= ticks) {
             this.funct();
             count = 0;
