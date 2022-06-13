@@ -42,3 +42,11 @@ html, body {
     color: white;
     transform: rotateY(180deg);
 }
+
+table, th, td {
+    background-color: khaki;
+    border-style:solid;
+    border: 2px black;
+    border-collapse: collapse;
+    border-top:2px blackS;
+}
