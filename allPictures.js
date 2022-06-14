@@ -1,4 +1,5 @@
 var folder = "images/";
+folder = "";
     var ajax=new XMLHttpRequest()
  
     ajax.open("GET",folder,true)
