@@ -5,7 +5,7 @@
 // Display a countdown timer in an element
 
 // create the date we are counting down
-var countDownDate = new Date("Dec 31, 2022 7:00:00").getTime();
+var countDownDate = new Date("Dec 25, 2022 7:00:00").getTime();
 
 //
 var x = setInterval(function() {
@@ -26,5 +26,5 @@ var x = setInterval(function() {
 let btnHello=document.querySelector('#hello');
 btnHello.addEventListener('click',()=>{
     btnHello.textContent='clicked';
-    alert("You clicked the button!");
+    alert("You clicked the hello button!");
 })
